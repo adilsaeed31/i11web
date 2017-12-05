@@ -1,10 +1,28 @@
 $space-large: 2.5rem;
-$title-color: #555;
+$title-color: #fff;
+$background-color: #2fb7ec;
+$menu-text-color: #2fb7ec;
+
+.custom-background {
+  background-color: $background-color !important;
+}
+
+.menu-text {
+  color: $title-color !important;
+}
+
+.anchor-text {
+  color: $title-color !important;
+}
 
 .page-title {
   color: $title-color;
   margin-top: $space-large;
   margin-bottom: $space-large;
+}
+
+.active {
+  color: $title-color !important;
 }
 
 input[type=search] {

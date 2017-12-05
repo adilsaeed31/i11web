@@ -1,9 +1,10 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
   entry: [
-    'script!jquery/dist/jquery.min.js',
-    'script!foundation-sites/dist/foundation.min.js',
+    'script-loader!jquery/dist/jquery.min.js',
+    'script-loader!foundation-sites/dist/js/foundation.js',
     './app/app.jsx'
   ],
   externals: {
@@ -16,24 +17,21 @@ module.exports = {
     })
   ],
   output: {
-    path: __dirname,
+    path: path.resolve(__dirname),
     filename: './public/bundle.js'
   },
   resolve: {
-    root: __dirname,
     alias: {
-      Main: 'app/components/Main.jsx',
-      Nav: 'app/components/Nav.jsx',
-      Weather: 'app/components/Weather.jsx',
-      WeatherForm: 'app/components/WeatherForm.jsx',
-      WeatherMessage: 'app/components/WeatherMessage.jsx',
-      About: 'app/components/About.jsx',
-      Examples: 'app/components/Examples.jsx',
-      openWeatherMap: 'app/api/openWeatherMap.jsx',
-      ErrorModal: 'app/components/ErrorModal.jsx',
-      applicationStyles: 'app/styles/app.scss'
+      Main: path.resolve(__dirname, 'app/components/Main.jsx'),
+      Header: path.resolve(__dirname, 'app/components/Header.jsx'),
+      Footer: path.resolve(__dirname, 'app/components/Footer.jsx'),
+      Nav: path.resolve(__dirname, 'app/components/Nav.jsx'),
+      LoginBox: path.resolve(__dirname, 'app/components/LoginBox.jsx'),
+      Listing: path.resolve(__dirname, 'app/components/Listing.jsx'),
+      Product: path.resolve(__dirname, 'app/components/Product.jsx'),
+      applicationStyles: path.resolve(__dirname, 'app/styles/app.scss')
     },
-    extensions: ['', '.js', '.jsx']
+    extensions: ['.js', '.jsx']
   },
   module: {
     loaders: [
