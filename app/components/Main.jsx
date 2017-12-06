@@ -11,11 +11,16 @@ class Main extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="grid-container full">
+
                 <Header/>
+
                 <Nav/>
+
                 <Listing/>
+
                 <Footer/>
+
             </div>
         );
     }

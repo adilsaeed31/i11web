@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
   entry: [
     'script-loader!jquery/dist/jquery.min.js',
-    'script-loader!foundation-sites/dist/js/foundation.js',
+    'script-loader!foundation-sites/dist/js/foundation.min.js',
     './app/app.jsx'
   ],
   externals: {
@@ -29,6 +29,7 @@ module.exports = {
       LoginBox: path.resolve(__dirname, 'app/components/LoginBox.jsx'),
       Listing: path.resolve(__dirname, 'app/components/Listing.jsx'),
       Product: path.resolve(__dirname, 'app/components/Product.jsx'),
+      SearchBox: path.resolve(__dirname, 'app/components/SearchBox.jsx'),
       applicationStyles: path.resolve(__dirname, 'app/styles/app.scss')
     },
     extensions: ['.js', '.jsx']
