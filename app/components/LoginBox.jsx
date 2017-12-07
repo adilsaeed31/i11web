@@ -29,7 +29,7 @@ class LoginBox extends React.Component {
                     </a>
                     </li>
                     <li className="mt7">
-                        <a href="#" className="anchor-text">
+                        <a data-toggle="offCanvasRightPush" href="#" className="anchor-text">
                             <i className="fa fa-shopping-cart"></i>
                         </a>
                     </li>

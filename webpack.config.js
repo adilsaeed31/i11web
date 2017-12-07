@@ -29,7 +29,10 @@ module.exports = {
       LoginBox: path.resolve(__dirname, 'app/components/LoginBox.jsx'),
       Listing: path.resolve(__dirname, 'app/components/Listing.jsx'),
       Product: path.resolve(__dirname, 'app/components/Product.jsx'),
+      ProductDetailBox: path.resolve(__dirname, 'app/components/ProductDetailBox.jsx'),
       SearchBox: path.resolve(__dirname, 'app/components/SearchBox.jsx'),
+      SupportBox: path.resolve(__dirname, 'app/components/SupportBox.jsx'),
+      CartCanvas: path.resolve(__dirname, 'app/components/CartCanvas.jsx'),
       applicationStyles: path.resolve(__dirname, 'app/styles/app.scss')
     },
     extensions: ['.js', '.jsx']

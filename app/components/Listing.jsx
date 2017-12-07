@@ -6,7 +6,8 @@ class Listing extends React.Component {
         return (
             <div>
 
-                <p><br/></p>
+                <br/>
+                <br/>
 
                 <div className="grid-container grid-container-listing-special">
                     <div className="grid-x">
@@ -15,8 +16,14 @@ class Listing extends React.Component {
                             <Product/>
                             <Product/>
                             <Product/>
-                        </div>
-                        <div className="grid-x grid-padding-x small-up-2 medium-up-3 large-up-4">
+                            <Product/>
+                            <Product/>
+                            <Product/>
+                            <Product/>
+                            <Product/>
+                            <Product/>
+                            <Product/>
+                            <Product/>
                             <Product/>
                             <Product/>
                             <Product/>
