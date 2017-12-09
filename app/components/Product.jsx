@@ -13,21 +13,21 @@ class Product extends React.Component {
         $('#product-detail').foundation('close')
     }
     render() {
-        let image = this.props.data;
+        let {image, price} = this.props;
 
         return (
             <div className="cell">
                 <div className="card custom-card" data-open="product-detail">
-                    <img src={image} width={'250'} height={'250'}/>
+                    <img className="image-cs" src={image} />
                     <div>
                         <strong>
-                            {this.generatePrice()}
+                            {price}
                         </strong>
                         <span className="font-10">د.إ.AED</span>
                         &nbsp;&nbsp;
                         <span className="font-9 grey-color">
                         <strike>
-                            {this.generatePrice()}
+                            {price + 20}
                             <span className="font-10">د.إ.AED</span>
                         </strike>
                         </span>
