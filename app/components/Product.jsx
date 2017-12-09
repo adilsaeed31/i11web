@@ -13,12 +13,12 @@ class Product extends React.Component {
         $('#product-detail').foundation('close')
     }
     render() {
-        let image = this.props.data.artwork_url;
+        let image = this.props.data;
 
         return (
             <div className="cell">
                 <div className="card custom-card" data-open="product-detail">
-                    <img src={image}/>
+                    <img src={image} width={'250'} height={'250'}/>
                     <div>
                         <strong>
                             {this.generatePrice()}

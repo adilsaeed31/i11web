@@ -5,13 +5,13 @@ import Product from 'Product';
 
 const imageList = [];
 const api = {
-    baseUrl: 'https://api.soundcloud.com',
-    // baseUrl: 'http://marketplace.alifca.com/api/mobile/products',
-    client_id: 'caf73ef1e709f839664ab82bef40fa96'
+    // baseUrl: 'https://api.soundcloud.com',
+    baseUrl: 'http://marketplace.alifca.com/api/mobile/products',
+    // client_id: 'caf73ef1e709f839664ab82bef40fa96'
 };
 
 class Listing extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
 
 
@@ -22,46 +22,39 @@ class Listing extends React.Component {
         };
 
     }
+    componentDidUpdate() {
+        $(document).foundation();
+    }
     loadItems(page) {
         let self = this;
 
-        let url = api.baseUrl + '/users/8665091/favorites';
-        // let url = api.baseUrl;
-        if(this.state.nextHref) {
+        // let url = api.baseUrl + '/users/8665091/favorites';
+        let url = api.baseUrl;
+        if (this.state.nextHref) {
             url = this.state.nextHref;
         }
 
-        //
-        // qwest.setDefaultOptions({
-        //     responseType: 'json',
-        //     headers: {
-        //         'Access-Control-Allow-Origin': '*'
-        //     }
-        // });
-
-
-
         qwest.get(url, {
-            // items_per_page: 40
-            client_id: api.client_id,
-            linked_partitioning: 1,
-            page_size: 40
+            // client_id: api.client_id,
+            // linked_partitioning: 1,
+            // page_size: 100
+            items_per_page: 40
         }, {
             cache: true
         })
-            .then(function(xhr, resp) {
-                if(resp) {
+            .then(function (xhr, resp) {
+                if (resp) {
                     let tracks = self.state.tracks;
                     resp.collection.map((track) => {
 
-                        if(track.artwork_url == null) {
+                        if (track.artwork_url == null) {
                             track.artwork_url = track.user.avatar_url;
                         }
 
                         tracks.push(track);
                     });
 
-                    if(resp.next_href) {
+                    if (resp.next_href) {
                         self.setState({
                             tracks: tracks,
                             nextHref: resp.next_href
@@ -80,7 +73,7 @@ class Listing extends React.Component {
         let items = [];
         this.state.tracks.map((track, i) => {
             items.push(
-                <Product data={track} key={i}/>
+                <Product data={track.artwork_url} key={i}/>
             );
         });
 
@@ -92,20 +85,20 @@ class Listing extends React.Component {
 
                 <div className="grid-container grid-container-listing-special">
                     <div className="grid-x">
-                            <InfiniteScroll
-                                pageStart={0}
-                                loadMore={this.loadItems.bind(this)}
-                                hasMore={this.state.hasMoreItems}
-                                loader={loader}
-                                useWindow={true}
-                                threshold={250}
-                            >
+                        <InfiniteScroll
+                            pageStart={0}
+                            loadMore={this.loadItems.bind(this)}
+                            hasMore={this.state.hasMoreItems}
+                            loader={loader}
+                            useWindow={true}
+                            threshold={500}
+                        >
 
-                                <div className="grid-x grid-padding-x small-up-2 medium-up-3 large-up-4">
+                            <div className="grid-x grid-padding-x small-up-2 medium-up-3 large-up-4">
                                 {items}
-                                </div>
+                            </div>
 
-                            </InfiniteScroll>
+                        </InfiniteScroll>
 
                     </div>
                 </div>
