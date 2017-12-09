@@ -5,9 +5,9 @@ import Product from 'Product';
 
 const imageList = [];
 const api = {
-    // baseUrl: 'https://api.soundcloud.com',
-    baseUrl: 'http://marketplace.alifca.com/api/mobile/products',
-    // client_id: 'caf73ef1e709f839664ab82bef40fa96'
+    baseUrl: 'https://api.soundcloud.com',
+    // baseUrl: 'http://marketplace.alifca.com/api/mobile/products',
+    client_id: 'caf73ef1e709f839664ab82bef40fa96'
 };
 
 class Listing extends React.Component {
@@ -25,13 +25,13 @@ class Listing extends React.Component {
     loadItems(page) {
         let self = this;
 
-        // let url = api.baseUrl + '/users/8665091/favorites';
-        let url = api.baseUrl;
+        let url = api.baseUrl + '/users/8665091/favorites';
+        // let url = api.baseUrl;
         if(this.state.nextHref) {
             url = this.state.nextHref;
         }
 
-
+        //
         // qwest.setDefaultOptions({
         //     responseType: 'json',
         //     headers: {
@@ -42,9 +42,10 @@ class Listing extends React.Component {
 
 
         qwest.get(url, {
-            // client_id: api.client_id,
-            // linked_partitioning: 1,
-            // page_size: 40
+            // items_per_page: 40
+            client_id: api.client_id,
+            linked_partitioning: 1,
+            page_size: 40
         }, {
             cache: true
         })
