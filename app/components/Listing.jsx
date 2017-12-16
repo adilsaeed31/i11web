@@ -11,7 +11,6 @@ class Listing extends React.Component {
     constructor(props) {
         super(props);
 
-
         this.state = {
             tracks: [],
             hasMoreItems: true,
@@ -35,18 +34,6 @@ class Listing extends React.Component {
               if (resp) {
                     let tracks = self.state.tracks;
                     tracks = (resp.params.page > 1) ? [...tracks, ...resp.products] : resp.products;
-                    console.log(tracks, 'tracks ...');
-
-                  // console.log("tracks",tracks);
-                    // resp.products.map((track) => {
-                    //
-                    //     if(!track.main_pair.detailed) {
-                    //         track.main_pair.detailed.mobile_image_path = './assets/images/300x300.png';
-                    //     }
-                    //
-                    //      tracks.push(track);
-                    // });
-
 
                     if (resp.params.page > 0) {
                         self.setState({
@@ -66,6 +53,7 @@ class Listing extends React.Component {
 
         let items = [];
         this.state.tracks.map((track, i) => {
+
             items.push(
                 <Product
                     image={ (track.main_pair) ? track.main_pair.detailed.mobile_image_path : "./assets/images/300x300.png"}
@@ -73,6 +61,28 @@ class Listing extends React.Component {
                     key={i}
                 />
             );
+            // items.push(
+            //     <div className="cell" key={i}>
+            //         <div className="card custom-card" data-open="product-detail">
+            //             <img className="image-cs" src={ (track.main_pair) ? track.main_pair.detailed.mobile_image_path : "./assets/images/300x300.png"} />
+            //             <div>
+            //                 <strong>
+            //                     {(track.price) ? track.price.price : 0}
+            //                 </strong>
+            //                 <span className="font-10">د.إ.AED</span>
+            //                 &nbsp;&nbsp;
+            //                 <span className="font-9 grey-color">
+            //             <strike>
+            //                 {(track.price) ? track.price.price : 0}
+            //                 <span className="font-10">د.إ.AED</span>
+            //             </strike>
+            //             </span>
+            //                 <p className="font-9 grey-color">{track.price.price ? track.price.price : 0}+ bought this</p>
+            //             </div>
+            //         </div>
+            //
+            //     </div>
+            // );
         });
 
         return (
@@ -88,6 +98,7 @@ class Listing extends React.Component {
                             loadMore={this.loadItems.bind(this)}
                             hasMore={this.state.hasMoreItems}
                             loader={loader}
+                            threshold={250}
                         >
 
                             <div className="grid-x grid-padding-x small-up-2 medium-up-3 large-up-4">

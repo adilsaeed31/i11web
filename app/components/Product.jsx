@@ -36,15 +36,15 @@ class Product extends React.Component {
                 </div>
 
 
-                <div className="large reveal" id="product-detail" data-reveal data-close-on-esc>
+                {/*<div className="large reveal" id="product-detail" data-reveal data-close-on-esc>*/}
 
-                    <ProductDetailBox/>
+                    {/*<ProductDetailBox/>*/}
 
-                    <a onClick={this.close} className="close-button">
-                        <span aria-hidden="true">&times;</span>
-                    </a>
+                    {/*<a onClick={this.close} className="close-button">*/}
+                        {/*<span aria-hidden="true">&times;</span>*/}
+                    {/*</a>*/}
 
-                </div>
+                {/*</div>*/}
 
             </div>
         );
