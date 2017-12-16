@@ -24,7 +24,7 @@ class Listing extends React.Component {
         let url = api.baseUrl;
 
         qwest.get(url, {
-            items_per_page: (this.state.page == 1 ? 100 : 30),
+            items_per_page: (this.state.page == 1 ? 100 : 40),
             page: this.state.page,
             tiw: 200,
             hiw: 200

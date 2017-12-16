@@ -16,7 +16,7 @@ module.exports = {
       'jQuery': 'jquery'
     }),
     new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify('production')
+        'process.env.NODE_ENV': JSON.stringify('development')
     }),
     new webpack.optimize.UglifyJsPlugin()
   ],
@@ -55,5 +55,5 @@ module.exports = {
       }
     ]
   },
-  //devtool: 'cheap-module-eval-source-map'
+  devtool: 'cheap-module-eval-source-map'
 };

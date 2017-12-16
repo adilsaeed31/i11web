@@ -21,10 +21,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Listing.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Listing.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/components/Listing.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
+            <state relative-caret-position="252">
               <caret line="26" column="60" lean-forward="false" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -33,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webpack.config.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
-              <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+              <caret line="18" column="59" lean-forward="false" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -47,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/app/components/Product.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
-              <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+              <caret line="35" column="22" lean-forward="false" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -153,9 +153,9 @@
         <option value="$PROJECT_DIR$/app/components/CartCanvas.jsx" />
         <option value="$PROJECT_DIR$/app/components/ProductDetailBox.jsx" />
         <option value="$PROJECT_DIR$/app/styles/app.scss" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/app/components/Product.jsx" />
         <option value="$PROJECT_DIR$/app/components/Listing.jsx" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
       </list>
     </option>
   </component>
@@ -260,12 +260,12 @@
       <workItem from="1512798446589" duration="12447000" />
       <workItem from="1512814277670" duration="11152000" />
       <workItem from="1513072206007" duration="48000" />
-      <workItem from="1513402890346" duration="3438000" />
+      <workItem from="1513402890346" duration="4112000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93137000" />
+    <option name="totallyTimeSpent" value="93811000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="-4" width="1920" height="1037" extended-state="6" />
@@ -609,26 +609,26 @@
     <entry file="file://$PROJECT_DIR$/app/components/Product.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+          <caret line="35" column="22" lean-forward="false" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/Listing.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
+        <state relative-caret-position="252">
           <caret line="26" column="60" lean-forward="false" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="59" lean-forward="false" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
