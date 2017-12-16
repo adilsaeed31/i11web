@@ -25,7 +25,9 @@ class Listing extends React.Component {
 
         qwest.get(url, {
             items_per_page: 40,
-            page: this.state.page
+            page: this.state.page,
+            tiw: 200,
+            hiw: 200
         }, {
             cache: true
         })
