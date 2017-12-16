@@ -18,7 +18,10 @@ class Listing extends React.Component {
         };
 
     }
-    loadItems(page) {
+    close() {
+        $('#product-detail').foundation('close')
+    }
+    loadItems() {
         let self = this;
 
         let url = api.baseUrl;
@@ -61,30 +64,10 @@ class Listing extends React.Component {
                     image={ (track.main_pair) ? track.main_pair.detailed.mobile_image_path : "./assets/images/300x300.png"}
                     price={ (track.price)? track.price.price : 0}
                     key={i}
+                    index={i}
                 />
             );
-            // items.push(
-            //     <div className="cell" key={i}>
-            //         <div className="card custom-card" data-open="product-detail">
-            //             <img className="image-cs" src={ (track.main_pair) ? track.main_pair.detailed.mobile_image_path : "./assets/images/300x300.png"} />
-            //             <div>
-            //                 <strong>
-            //                     {(track.price) ? track.price.price : 0}
-            //                 </strong>
-            //                 <span className="font-10">د.إ.AED</span>
-            //                 &nbsp;&nbsp;
-            //                 <span className="font-9 grey-color">
-            //             <strike>
-            //                 {(track.price) ? track.price.price : 0}
-            //                 <span className="font-10">د.إ.AED</span>
-            //             </strike>
-            //             </span>
-            //                 <p className="font-9 grey-color">{track.price.price ? track.price.price : 0}+ bought this</p>
-            //             </div>
-            //         </div>
-            //
-            //     </div>
-            // );
+
         });
 
         return (

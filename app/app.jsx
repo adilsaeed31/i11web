@@ -11,6 +11,8 @@ require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css');
 // App custom css with mix of sass
 require('style-loader!css-loader!sass-loader!applicationStyles');
 
+$(document).foundation();
+
 ReactDOM.render(
      <Main/>,
        document.getElementById('app')

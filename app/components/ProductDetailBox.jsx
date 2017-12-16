@@ -2,7 +2,10 @@ import React from 'react';
 
 class ProductDetailBox extends React.Component {
     handleBuyBtn() {
-        $('#product-detail').foundation('close');
+        $('#product-detail-' + this.props.index).foundation('close');
+    }
+    close() {
+        $('#product-detail-' + this.props.index).foundation('close')
     }
     render() {
         return (
@@ -251,6 +254,7 @@ class ProductDetailBox extends React.Component {
 
     }
 }
+
 
 
 module.exports = ProductDetailBox;

@@ -13,11 +13,11 @@ class Product extends React.Component {
         $('#product-detail').foundation('close')
     }
     render() {
-        let {image, price} = this.props;
+        let {image, price, index} = this.props;
 
         return (
-            <div className="cell">
-                <div className="card custom-card" data-open="product-detail">
+            <div className="cell" key={index}>
+                <div className="card custom-card" data-open={'product-detail'}>
                     <img className="image-cs" src={image} />
                     <div>
                         <strong>
@@ -36,15 +36,15 @@ class Product extends React.Component {
                 </div>
 
 
-                {/*<div className="large reveal" id="product-detail" data-reveal data-close-on-esc>*/}
+                <div className="large reveal" id={'product-detail'} data-reveal data-close-on-esc>
 
-                    {/*<ProductDetailBox/>*/}
+                    <ProductDetailBox/>
 
-                    {/*<a onClick={this.close} className="close-button">*/}
-                        {/*<span aria-hidden="true">&times;</span>*/}
-                    {/*</a>*/}
+                    <a onClick={this.close} className="close-button">
+                        <span aria-hidden="true">&times;</span>
+                    </a>
 
-                {/*</div>*/}
+                </div>
 
             </div>
         );
