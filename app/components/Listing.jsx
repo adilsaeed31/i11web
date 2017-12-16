@@ -24,7 +24,7 @@ class Listing extends React.Component {
         let url = api.baseUrl;
 
         qwest.get(url, {
-            items_per_page: 40,
+            items_per_page: (this.state.page == 1 ? 100 : 30),
             page: this.state.page,
             tiw: 200,
             hiw: 200
@@ -100,7 +100,7 @@ class Listing extends React.Component {
                             loadMore={this.loadItems.bind(this)}
                             hasMore={this.state.hasMoreItems}
                             loader={loader}
-                            threshold={250}
+                            threshold={500}
                         >
 
                             <div className="grid-x grid-padding-x small-up-2 medium-up-3 large-up-4">
